@@ -40,6 +40,7 @@ class Game {
       if (!letters.includes(letter)) {
         const matchingPlaces = word.match(letter)
         lives--
+        // missing--
         missing -= matchingPlaces ? matchingPlaces.length : 0 
         letters.push(letter)
       }

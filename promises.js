@@ -24,5 +24,20 @@ function createUsers(users) {
 }
 
 // Votre code ici (8 lignes)
+// getUsers()
+//   .then(createUsers)
+
+// getUsers()
+//   .then(users => {
+//     Promise
+//       .all(createUsers(users))
+//       .then(() => console.log('All users are created'))
+//   })
+
+function all(users) {
+  return Promise.all(createUsers(users))
+}
+
 getUsers()
-  .then(users => createUsers(users))
+  .then(all)
+  .then(() => console.log('All users are created'))
