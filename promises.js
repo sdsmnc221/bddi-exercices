@@ -24,3 +24,5 @@ function createUsers(users) {
 }
 
 // Votre code ici (8 lignes)
+getUsers()
+  .then(users => createUsers(users))
